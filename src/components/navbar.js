@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const NavbarContainer = styled.div`
-  background-color: aqua;
+  background-color: white;
 `;
 
 const LinksContainer = styled.div`
@@ -12,7 +12,7 @@ const LinksContainer = styled.div`
 `;
 
 const NavLink = styled.a`
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 0.5rem;
 `;
@@ -25,6 +25,8 @@ const Navbar = () => {
         <NavLink href="/about">About</NavLink>
         <NavLink href="/cart">Cart</NavLink>
         <NavLink href="/login">Login</NavLink>
+        <NavLink href="/merch">Merch</NavLink>
+        
       </LinksContainer>
     </NavbarContainer>
   );

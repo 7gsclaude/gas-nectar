@@ -1,27 +1,35 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import styled from "styled-components";
+import Navbar from "./components/Navbar";
+import Cart from "./components/Cart";
+import MerchList from "./components/MerchList";
+import Merch from "./components/Merch";
 
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from './components/Navbar.js'
+const Container = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: black;
+`;
 
-import Cart from './components/Cart.js'
-
-
-
-
+const Content = styled.div`
+  flex: 1;
+  padding: 2rem;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
+    <Container>
+      <Navbar />
+      <Content>
         <Routes>
-   
-          <Route path="/cart" exact component={Cart} /> 
-         
-          
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/merch" element={<Merch />} />
+          <Route path="/merch/:id" element={<MerchList />} />
         </Routes>
-      </Router>
-    </div>
+      </Content>
+    </Container>
   );
 }
 

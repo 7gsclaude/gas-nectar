@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
 import MerchList from "./components/MerchList";
 import Merch from "./components/Merch";
+import Home from "./components/Home";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -24,6 +25,7 @@ function App() {
       <Navbar />
       <Content>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/merch" element={<Merch />} />
           <Route path="/merch/:id" element={<MerchList />} />

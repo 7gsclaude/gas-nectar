@@ -21,9 +21,10 @@ const AboutMeContainer = styled.div`
 color: white;
 width: 90%;
 margin: 0 auto;
+align-items: center;
 
+`;
 
-`
 
 const Home = () => {
   return (
